@@ -1,1 +1,18 @@
-spring.application.name=auth-srv
+server:
+  port: 5000
+
+logging:
+  level:
+    root: DEBUG
+    org.apache.tomcat.util.net.NioEndpoint: ERROR
+    sun.rmi: ERROR
+    java.io: ERROR
+    javax.management: ERROR
+
+spring:
+  application:
+    name: auth-srv
+  security:
+    oauth2:
+      authorizationserver:
+        issuer-url: http://localhost:5000
